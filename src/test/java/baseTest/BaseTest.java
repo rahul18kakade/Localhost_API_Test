@@ -2,13 +2,15 @@ package baseTest;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
+import utits.Configuration;
+
+import java.util.Properties;
 
 public class BaseTest {
-
-    public void base_Test(){
-
-          RestAssured.baseURI= "http://localhost:3000";
-
+static Properties prop;
+    public static String base_Test(){
+          Configuration.readProperties(prop.getProperty("base_URI"));
+        return null;
     }
 
 }

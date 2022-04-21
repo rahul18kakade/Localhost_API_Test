@@ -11,11 +11,12 @@ public class StepsForGET extends BaseTest {
 
     @Given("User is on baseURI")
     public void user_is_on_base_uri() {
-        base_Test();
+        baseTest.BaseTest.base_Test();
     }
     @When("User calls for users list")
     public void user_calls_for_users_list() {
         given().when().get(APIPath.apiPath.GET_LIST_OF_USERS).then().statusCode(200).log().all();
+
     }
     @Then("User must get list of users")
     public void user_must_get_list_of_users() {
