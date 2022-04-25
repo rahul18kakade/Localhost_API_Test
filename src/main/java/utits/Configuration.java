@@ -5,20 +5,16 @@ import java.util.Properties;
 
 public class Configuration {
 
-public static String readProperties(String url) {
+public static Properties readProperties(String base_URI) {
 
-    String base_URI = null;
     try {
         FileInputStream fis = new FileInputStream(System.getProperty("user.dir") + "\\ConfigFiles\\qa.properties");
-        Properties prop = new Properties();
-        prop.load(fis);
-        base_URI = prop.getProperty("base_URI");
-
-
-    } catch (Exception e) {
+       Properties prop = new Properties();
+       prop.load(fis);
+       return prop;
+    }  catch (Exception e) {
         e.printStackTrace();
     }
-
-    return base_URI;
+    return null;
 }
 }

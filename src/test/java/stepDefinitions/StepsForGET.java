@@ -4,14 +4,13 @@ import apiConfigs.APIPath;
 import baseTest.BaseTest;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-
 import static io.restassured.RestAssured.*;
 
 public class StepsForGET extends BaseTest {
 
-    @Given("User is on baseURI")
+//    @Given("User is on baseURI")
     public void user_is_on_base_uri() {
-        baseTest.BaseTest.base_Test();
+        base_Test();
     }
     @When("User calls for users list")
     public void user_calls_for_users_list() {

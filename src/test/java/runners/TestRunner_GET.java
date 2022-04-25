@@ -1,6 +1,5 @@
 package runners;
 
-
 import io.cucumber.junit.Cucumber;
 import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
@@ -10,11 +9,11 @@ import org.junit.runner.RunWith;
 
         features = "C:\\Users\\User\\Local_API_Test\\src\\test\\java\\functionalTests\\GET_ApiTest.feature",
         glue = "stepDefinitions",
-        plugin = {"pretty","html:reports/test-output/htmlReport.html","json:reports/test-output/jsonReport.json"},
-//        dryRun = true,
+        plugin = {"pretty","html:reports/test-output-GET/htmlReport.html",
+                "json:reports/test-output-GET/jsonReport.json"},
+        dryRun = false,
         monochrome = true
 )
 
-
-public class TestRunnerForGET {
+public class TestRunner_GET {
 }
